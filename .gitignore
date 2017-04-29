@@ -5,3 +5,4 @@
 *.Rproj
 *.swp
 input/*.csv
+output/*.png
