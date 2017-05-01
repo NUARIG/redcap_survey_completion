@@ -30,7 +30,11 @@ mysubtitle = paste("Start Date:",mystart,
 png(filename="output/surveyresponse.png",width=1280,height=960,res=150)
 plot(mydataframe$mytimes,mydataframe$total,
      bty="n", main=mymaintitle, sub = mysubtitle,
+<<<<<<< HEAD
      type="s", lwd=3, col='red',
+=======
+     type="s", lwd=3, col='blue',
+>>>>>>> 2d2174a14188a1c3c966fc5cb8a9672ce7800156
      ylab="# of Survey Responses Completed", ylim=c(0,1000), yaxt="n", yaxs="r",
      xlab="Time (UTC)", xlim=c(mystart,max(mytimes)), xaxt="n", xaxs="r")
 
