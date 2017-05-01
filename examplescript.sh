@@ -11,7 +11,7 @@ set -e
 source ~/.bash_profile
 
 # See config/rc_srvy_cmpltn.txt for definitions of anaconda3 environment
-# You create the environment once using `conda create -f config/rc_srvy_cmpltn.txt`
+# You create the environment once using `conda create -n rc_srvy_cmpltn --file config/rc_srvy_cmpltn.txt`
 source activate rc_srvy_cmpltn
 
 # Make sure this script is in your root directory of the git repo so it can find 'input/'
