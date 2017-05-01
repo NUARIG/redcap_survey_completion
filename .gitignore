@@ -5,4 +5,5 @@
 *.Rproj
 *.swp
 input/*.csv
+config/rc_credentials.txt
 output/*.png
