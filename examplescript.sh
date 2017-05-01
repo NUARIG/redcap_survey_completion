@@ -19,6 +19,6 @@ source activate rc_srvy_cmpltn
 cd /Path/to/this/script/
 
 # Here we go. If python fails it doesn't run Rscript. `say` is for Mac OS X
-python fetchsurveydata.py || (say "could not get survey data" ; exit 1 )
-Rscript surveyAnalysis.R > /dev/null 2>&1
+python fetchsurveydata.py > /dev/null 2>&1 || (say "could not get survey data" ; exit 1 )
+Rscript surveyAnalysis.R > /dev/null 2>&1 || (say "could not run R script"; exit 1)
 say "updated survey graph"
