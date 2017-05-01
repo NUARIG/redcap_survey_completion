@@ -19,9 +19,17 @@ mycumulative = seq(length(mytimes))
 
 mydataframe = data.frame(mytimes = mytimes, total = mycumulative, row.names = NULL)
 
+mymaintitle = paste("Number of Completed User Agreements:",
+                    as.character(length(mytimes)))
+mysubtitle = paste("Start Date:",mystart,
+                   "-",
+                   "End Date:",myend,
+                   "-",
+                   "Current Time:",Sys.time())
+
 png(filename="output/surveyresponse.png",width=1280,height=960,res=150)
 plot(mydataframe$mytimes,mydataframe$total,
-     bty="n", main="Number of Completed User Agreements", 
+     bty="n", main=mymaintitle, sub = mysubtitle,
      type="s", lwd=3, col='blue',
      ylab="# of Survey Responses Completed", ylim=c(0,1000), yaxt="n", yaxs="r",
      xlab="Time (UTC)", xlim=c(mystart,max(mytimes)), xaxt="n", xaxs="r")
