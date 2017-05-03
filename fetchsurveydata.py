@@ -1,4 +1,5 @@
 import requests
+import sys
 
 fh = open('config/rc_credentials.txt')
 myurl = next(fh).strip()
@@ -23,6 +24,7 @@ mydata = {
 myreq = requests.post( myurl, data = mydata )
 
 if not myreq.ok:
+    sys.stderr.write('fetchsurveydata.py could not fetch data from API call\n')
     exit(1)
 
 fh = open ('input/mysurvey.csv', 'w')
