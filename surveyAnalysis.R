@@ -44,7 +44,7 @@ abline(v=as.POSIXct("2017-05-19 23:59:59"), lwd=2, lty=1) #When accounts suspend
 # abline(v=as.POSIXct("2014-06-02 13:00:00"),lty="dashed") #When the session 002 was opened
 # abline(v=as.POSIXct("2014-10-27 13:00:00"),lty="dashed") #When the session 003 was opened
 rect(xleft = as.POSIXct("2017-05-20 06:00:00"),xright = as.POSIXct("2017-05-23"),
-     ybottom = 950, ytop = 1450, col="white",lty = 0)
+     ybottom = 850, ytop = 1450, col="white",lty = 0)
 text(as.POSIXct("2017-05-19 23:59:59"),1450, "Response Deadline",
-     col='#4E2A84',srt=270,adj = c(0,-0.5),font=2)
+     col='#4E2A84',srt=270,adj = c(0,-0.6),font=2)
 dev.off()
