@@ -4,6 +4,7 @@
 .Ruserdata
 *.Rproj
 *.swp
+runsurvey.sh
 input/*.csv
 config/rc_credentials.txt
 output/*.png
