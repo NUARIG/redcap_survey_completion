@@ -39,7 +39,7 @@ axis(2, seq(0,max(mycumulative)+200,500), tick=FALSE, las=2)
 
 abline(h=seq(0,2000,500),lwd=2,lty=1)
 abline(h=seq(0,2000,100),lwd=1,lty=2)
-abline(v=as.POSIXct("2017-05-19 23:59:59"), lwd=2, lty=1) #When accounts suspend
+abline(v=as.POSIXct("2017-05-19 23:59:59"), lwd=2, lty=2) #When accounts suspend
 rect(xleft = as.POSIXct("2017-05-20 06:00:00"),xright = as.POSIXct("2017-05-23"),
      ybottom = 850, ytop = 1450, col="white",lty = 0)
 text(as.POSIXct("2017-05-19 23:59:59"),1450, "Response Deadline",
