@@ -23,8 +23,6 @@ mymaintitle = paste("Number of Completed User Agreements:",
                     as.character(length(mytimes)))
 mysubtitle = paste("Start Date:",mystart,
                    "-",
-                   "End Date:",myend,
-                   "-",
                    "Current Time:",Sys.time())
 
 png(filename="output/surveyresponse.png",width=1280,height=960,res=150)
