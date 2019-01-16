@@ -5,7 +5,7 @@ rm(list=ls())
 formname <- paste('key_fields','timestamp',sep = '_')
 
 #truncates data. Starts plotting at start date not start of data
-mystart <- as.POSIXct("2017-03-06")
+mystart <- as.POSIXct("2017-03-01")
 myend <- as.POSIXct("2020-12-31")
 
 mysurveys <- read.csv("input/mysurvey.csv", stringsAsFactors=FALSE )
@@ -32,14 +32,12 @@ plot(mydataframe$mytimes,mydataframe$total,
      ylab="# of Survey Responses Completed", ylim=c(0,max(mycumulative)+200), yaxt="n", yaxs="r",
      xlab="Time (UTC)", xlim=c(mystart,max(mytimes)+7*24*60*60), xaxt="n", xaxs="r")
 
-axis.POSIXct(1, at=seq(mystart, max(mytimes)+7*24*60*60, 7*24*60*60), format="%D")
+axis.POSIXct(1, at=seq(mystart,max(mytimes)+90*24*60*60,"quarters"), format="%b %y")
 axis(2, seq(0,max(mycumulative)+200,500), tick=FALSE, las=2)
 
-abline(h=seq(0,3000,500),lwd=2,lty=1)
-abline(h=seq(0,3000,100),lwd=0.5,lty=2)
+abline(h=seq(0,4000,1000),lwd=2,lty=1)
+abline(h=seq(0,4000,500),lwd=0.5,lty=2)
 abline(v=as.POSIXct("2017-05-19 23:59:59"), lwd=2, lty=2) #When accounts suspend
-rect(xleft = as.POSIXct("2017-05-20 06:00:00"),xright = as.POSIXct("2017-05-23"),
-     ybottom = 850, ytop = 1450, col="white",lty = 0)
-text(as.POSIXct("2017-05-19 23:59:59"),1450, "Response Deadline",
+text(as.POSIXct("2017-05-19 23:59:59"),3550, "Response Deadline",
      col='#4E2A84',srt=270,adj = c(0,-0.6),font=2)
 dev.off()
